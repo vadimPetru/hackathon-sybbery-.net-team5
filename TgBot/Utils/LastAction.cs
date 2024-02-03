@@ -4,7 +4,7 @@ namespace TgBot.Utils
 {
     public class LastAction
     {
-        public BankWorker Action;
-        public object? Data { get; set;}
+        public BankWorker Action { get; set; }
+        public object? Data { get; set; }
     }
 }
