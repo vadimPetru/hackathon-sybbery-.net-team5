@@ -2,9 +2,10 @@ namespace TgBot.Enums
 {
   public enum BankWorker
   {
-        Getbanks,
-        GetListCurrency,
-        Rate,
-        Rates,
-        Statistics
+    Getbanks,
+    GetListCurrency,
+    Rate,
+    Rates,
+    Statistics
   }
+}
