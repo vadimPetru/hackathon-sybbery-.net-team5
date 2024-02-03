@@ -29,9 +29,7 @@ namespace TgBot.Handler
                 switch(clientAction.Action)
                 {
                     case BankWorker.Getbanks:
-                        // handler = BankHandler.HandleUpdateAsync;
-                        clientAction.Action = BankWorker.GetListCurrency;
-                        messageHandled = true;
+                        handler = BankHandler.HandleUpdateAsync;
                         break;
                     case BankWorker.GetListCurrency:
                         handler = ChooseCurrencyHandler.HandleUpdateAsync;
