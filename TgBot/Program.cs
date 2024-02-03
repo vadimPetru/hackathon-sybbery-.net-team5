@@ -1,7 +1,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using TgBot.Handler;
 using TgBot.Utils;
 
 var bot = new TelegramBotClient("6925511900:AAFIkCLTgwRyPcS27u2avPs6GainQHHduao");
@@ -9,10 +9,6 @@ var bot = new TelegramBotClient("6925511900:AAFIkCLTgwRyPcS27u2avPs6GainQHHduao"
 async Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
 {
     Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
-}
-
-async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-{
 }
 
 var cts = new CancellationTokenSource();
@@ -23,7 +19,7 @@ var receiverOptions = new ReceiverOptions
 };
 
 bot.StartReceiving(
-    HandleUpdateAsync,
+    BaseHandler.HandleUpdateAsync,
     HandleErrorAsync,
     receiverOptions,
     cancellationToken

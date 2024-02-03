@@ -8,3 +8,4 @@ namespace TgBot.Enums
         Rates,
         Statistics
   }
+}
