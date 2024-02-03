@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Binance.Spot" Version="4.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
     <ProjectReference Include="..\TgBot\TgBot.csproj" />
   </ItemGroup>
-
 </Project>
