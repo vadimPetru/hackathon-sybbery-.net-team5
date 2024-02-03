@@ -2,6 +2,7 @@
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using TgBot.Utils;
 
 var bot = new TelegramBotClient("6925511900:AAFIkCLTgwRyPcS27u2avPs6GainQHHduao");
 
@@ -30,3 +31,6 @@ bot.StartReceiving(
 
 Console.WriteLine("Press enter to exit");
 Console.ReadLine();
+
+Console.WriteLine("Saving data to file");
+await LastActionStorage.SaveToFile();
