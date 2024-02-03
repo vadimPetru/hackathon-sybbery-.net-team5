@@ -8,7 +8,7 @@ namespace TgBot.Handler
 {
     public class ChooseCurrencyHandler
     {
-        private static List<string> banks = new (){"alf","bnb","tkt"};
+        private static List<string> banks = new (){"БелИнвест", "Алфа", "БНБ"};
         private static List<string> carruncies = new (){"usd","rub","eur"};
         
         public static async Task<bool> HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
@@ -42,7 +42,7 @@ namespace TgBot.Handler
                 keys.Add(new KeyboardButton(carruncies[i]));
             }
 
-            var ikm = new ReplyKeyboardMarkup(keys);
+            var ikm = new ReplyKeyboardMarkup(keys){ResizeKeyboard = true};
             await botClient.SendTextMessageAsync(update.Message.Chat.Id, text, replyMarkup: ikm, cancellationToken: cancellationToken);
 
             storagedClient.Data = choosedBank;
