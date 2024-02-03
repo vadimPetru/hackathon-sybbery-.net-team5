@@ -5,7 +5,10 @@ namespace TgBot.Enums
     Getbanks,
     GetListCurrency,
     Rate,
-    Rates,
-    Statistics
+    CurrentDay,
+    CustomDay,
+    Statistics,
+    AnotherBank,
+    AnotherCurrency
   }
 }
